@@ -34,24 +34,7 @@ for gg in range(N + 1):
     if (c * gg % (p1 * q1)) == 1:
         d = gg
 for i in a:
-    if k == 5:
-        if int(i) ** c % N // 1000 == 0:
-            h = ("00" + str(int(i) ** int(c) % N))
-            b += h
-        elif int(i) ** c % N // 10000 == 0:
-            h = ("0" + str(int(i) ** int(c) % N))
-            b += h
-        else:
-            b += str(int(i) ** int(c) % N)
-    else:
-        if int(i) ** c % N // 100 == 0:
-            h = ("00" + str(int(i) ** int(c) % N))
-            b += h
-        elif int(i) ** c % N // 1000 == 0:
-            h = ("0" + str(int(i) ** int(c) % N))
-            b += h
-        else:
-            b += str(int(i) ** int(c) % N)
+      b += str(int(i) ** int(c) % N).zfill(k)
 for i in name:
     temp_in = i ** g % l
     temp_out = chr(temp_in + 848)
